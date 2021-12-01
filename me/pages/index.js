@@ -3,13 +3,14 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {SocialIcon} from 'react-social-icons'
 import pic from '../public/pp.jpg' 
+import Product from '../Components/Product'
 
 export default function Home() {
   return (
     <>
       <head>
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+          {"@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap')"}
         </style>
       </head>
       <div className={styles.container}>
@@ -18,16 +19,24 @@ export default function Home() {
             <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', textAlign:'center', alignSelf:'center'}}>
               <Image src='/pp.jpg' width='75px' height='75px'></Image>
               <div style={{display:'flex', flexDirection:'column', margin:'3vh'}}>
-                <h2 style={{padding:'0', margin:'0vh 0vh', color:'rgba(255, 255, 255, 0.699)', lineHeight:'2'}}>Hey! I'm Nikhil</h2>
-                <h2 style={{padding:'0', margin:'0'}}> 👽 🤖 🚀</h2>
+                <h2 style={{padding:'0', margin:'0vh 0vh', color:'rgba(255, 255, 255, 0.699)', lineHeight:'2'}}>{"Hey! I'm Nikhil"}</h2>
+                <h2 style={{padding:'0', margin:'0', fontFamily:'Segoe UI Emoji !important'}}> 👽 🤖 🚀</h2>
               </div>
             </div>
           </div>
-          <div style={{backgroundColor:'rgba(255, 59, 0, 0.2) !important',borderBottom: '2px solid #FF3B00', flexDirection:'row', justifyContent:'space-around'}} className={styles.glass}>
-            <SocialIcon url="https://github.com/nikhilol" bgColor='#FF3B00' fgColor='#FFFFFF' style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
-            <SocialIcon url="https://twitter.com/Niikhiil_P" bgColor='#FF3B00' fgColor='#FFFFFF' style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
-            <SocialIcon url="mailto:nikhil.patel.np@outlook.com" bgColor='#FF3B00' fgColor='#FFFFFF'style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
-            <SocialIcon url="https://www.linkedin.com/in/nikhi1patel" bgColor='#FF3B00' fgColor='#FFFFFF' style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
+          <div style={{display:'flex', justifyContent:'space-between'}}>
+            <div style={{backgroundColor:'rgba(255, 59, 0, 0.2) !important',borderBottom: '2px solid #FF3B00', flexDirection:'row', justifyContent:'space-around'}} className={styles.glass}>
+              <SocialIcon url="https://github.com/nikhilol" bgColor='#FF3B00' fgColor='#FFFFFF' style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
+            </div>
+            <div style={{backgroundColor:'rgba(255, 59, 0, 0.2) !important',borderBottom: '2px solid #FF3B00', flexDirection:'row', justifyContent:'space-around'}} className={styles.glass}>
+              <SocialIcon url="https://twitter.com/Niikhiil_P" bgColor='#FF3B00' fgColor='#FFFFFF' style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
+            </div>
+            <div style={{backgroundColor:'rgba(255, 59, 0, 0.2) !important',borderBottom: '2px solid #FF3B00', flexDirection:'row', justifyContent:'space-around'}} className={styles.glass}>
+              <SocialIcon url="mailto:nikhil.patel.np@outlook.com" bgColor='#FF3B00' fgColor='#FFFFFF'style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
+            </div>
+            <div style={{backgroundColor:'rgba(255, 59, 0, 0.2) !important',borderBottom: '2px solid #FF3B00', flexDirection:'row', justifyContent:'space-around'}} className={styles.glass}>
+              <SocialIcon url="https://www.linkedin.com/in/nikhi1patel" bgColor='#FF3B00' fgColor='#FFFFFF' style={{maxHeight:'4vh', maxWidth:'4vh'}}></SocialIcon>
+            </div>
           </div>
           <div className={styles.glass}>
             <h2 className={styles.Title} style={{marginBottom:'1vh'}}>About</h2>
@@ -63,10 +72,10 @@ export default function Home() {
             </ul>
           </div>
           <h2 style={{backgroundColor:'rgba(255, 59, 0, 0.2) !important',borderBottom: '2px solid #FF3B00', color:'#FF3B00', fontWeight:'bolder'}} className={styles.glass}>Recent Projects</h2>
-          <div style={{height:'25vh'}} className={styles.product}></div>
-          <div style={{height:'25vh'}} className={styles.product}></div>
-          <div style={{height:'25vh'}} className={styles.product}></div>
-          <div style={{height:'25vh'}} className={styles.product}></div>
+          <Product img={"/demo.gif"} title={'Hand Drawn Icons'}/>
+          <Product img={"https://app.nodemap.io/picture.png"} title={'Nodemap'}/>
+          <Product img={"https://ph-365.web.app/og.png"} title={'Product Hunt 365'}/>
+          <Product img={"/tweet.png"} title={'Popular Tweets'}/>
         </div>
       </div>
     </>
